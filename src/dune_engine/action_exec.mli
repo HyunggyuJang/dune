@@ -57,5 +57,5 @@ val _BUILD_PATH_PREFIX_MAP : string
 val extend_build_path_prefix_map :
      Env.t
   -> [ `Existing_rules_have_precedence | `New_rules_have_precedence ]
-  -> Build_path_prefix_map.map
+  -> Build_path_prefix_map1.map
   -> Env.t

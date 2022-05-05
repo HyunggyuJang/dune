@@ -20,7 +20,7 @@
   dune_meta_parser
   dune_section
   dune_cache
-  build_path_prefix_map
+  build_path_prefix_map1
   dune_engine
   dune_config)
  (synopsis "Internal Dune library, do not use!"))

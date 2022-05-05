@@ -502,7 +502,7 @@ let exec_until_all_deps_ready ~ectx ~eenv t =
 let _BUILD_PATH_PREFIX_MAP = "BUILD_PATH_PREFIX_MAP"
 
 let extend_build_path_prefix_map env how map =
-  let new_rules = Build_path_prefix_map.encode_map map in
+  let new_rules = Build_path_prefix_map1.encode_map map in
   Env.update env ~var:_BUILD_PATH_PREFIX_MAP ~f:(function
     | None -> Some new_rules
     | Some existing_rules ->

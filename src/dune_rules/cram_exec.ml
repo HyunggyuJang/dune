@@ -246,7 +246,7 @@ let line_number =
   seq [ set "123456789"; rep digit ]
 
 let rewrite_paths build_path_prefix_map ~parent_script ~command_script s =
-  match Build_path_prefix_map.decode_map build_path_prefix_map with
+  match Build_path_prefix_map1.decode_map build_path_prefix_map with
   | Error msg ->
     Code_error.raise "Cannot decode build prefix map"
       [ ("build_path_prefix_map", String build_path_prefix_map)
@@ -275,7 +275,7 @@ let rewrite_paths build_path_prefix_map ~parent_script ~command_script s =
       [ a; b ] |> List.map ~f:(fun re -> seq [ bol; re ]) |> alt |> compile
     in
     Re.replace abs_path_re s ~f:(fun g ->
-        Build_path_prefix_map.rewrite map (Re.Group.get g 0))
+        Build_path_prefix_map1.rewrite map (Re.Group.get g 0))
     |> Re.replace_string error_msg ~by:""
 
 let sanitize ~parent_script cram_to_output :

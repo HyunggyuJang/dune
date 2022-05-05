@@ -24,7 +24,7 @@
   dune_stats
   dune_action_plugin
   dune_util
-  build_path_prefix_map
+  build_path_prefix_map1
   dune_section
   dune_rpc_private
   dune_rpc_server
