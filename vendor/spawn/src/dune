@@ -1,5 +1,5 @@
 (library
- (name spawn)
+ (name spawn1)
  (foreign_stubs
   (language c)
   (names spawn_stubs))

@@ -1,6 +1,6 @@
 let executables = [ "main" ]
 
-let external_libraries = [ "unix"; "threads.posix" ]
+let external_libraries = [ "unix"; "threads.posix"; "threads"; "spawn" ]
 
 let local_libraries =
   [ ("otherlibs/ordering", Some "Ordering", false, None)
@@ -27,7 +27,6 @@ let local_libraries =
   ; ("src/ocaml-config", Some "Ocaml_config", false, None)
   ; ("otherlibs/action-plugin/src", Some "Dune_action_plugin", false, None)
   ; ("otherlibs/chrome-trace/src", Some "Chrome_trace", false, None)
-  ; ("vendor/spawn/src", Some "Spawn", false, None)
   ; ("src/dune_stats", Some "Dune_stats", false, None)
   ; ("src/meta_parser", Some "Dune_meta_parser", false, None)
   ; ("src/section", Some "Dune_section", false, None)
@@ -43,6 +42,7 @@ let local_libraries =
     None)
   ; ("src/dune_file_watcher", Some "Dune_file_watcher", false, None)
   ; ("src/dune_engine", Some "Dune_engine", false, None)
+  ; ("vendor/spawn/src", Some "Spawn1", false, None)
   ; ("src/dune_config", Some "Dune_config", false, None)
   ; ("src/dune_rules", Some "Dune_rules", true, None)
   ; ("src/upgrader", Some "Dune_upgrader", false, None)

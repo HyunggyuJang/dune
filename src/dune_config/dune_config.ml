@@ -400,7 +400,7 @@ let auto_concurrency =
             let prog = Path.to_string prog in
             let fdr, fdw = Unix.pipe () ~cloexec:true in
             match
-              Spawn.spawn ~prog ~argv:(prog :: args)
+              Spawn1.spawn ~prog ~argv:(prog :: args)
                 ~stdin:(Lazy.force Config.dev_null_in)
                 ~stdout:fdw
                 ~stderr:(Lazy.force Config.dev_null_out)
